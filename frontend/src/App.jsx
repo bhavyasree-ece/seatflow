@@ -480,7 +480,7 @@ function Home() {
 
           const response =
             await fetch(
-              "http://https://seatflow-ytk1.onrender.com/api/events"
+              "https://seatflow-ytk1.onrender.com/api/events"
             );
 
           const data =

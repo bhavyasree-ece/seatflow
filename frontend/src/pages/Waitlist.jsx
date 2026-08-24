@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./Waitlist.css";
 
-const API_URL = "http://https://seatflow-ytk1.onrender.com";
+const API_URL = "https://seatflow-ytk1.onrender.com";
 
 function Waitlist() {
   const navigate = useNavigate();

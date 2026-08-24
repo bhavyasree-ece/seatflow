@@ -22,7 +22,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "http://https://seatflow-ytk1.onrender.com/api/auth/register",
+        "https://seatflow-ytk1.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {

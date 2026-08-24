@@ -50,7 +50,7 @@ function OrganiserDashboard() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://https://seatflow-ytk1.onrender.com/api/events");
+      const response = await fetch("https://seatflow-ytk1.onrender.com/api/events");
       const data = await response.json();
 
       if (!response.ok || !data.success) {
@@ -74,7 +74,7 @@ function OrganiserDashboard() {
     try {
       setLoadingVenues(true);
 
-      const response = await fetch("http://https://seatflow-ytk1.onrender.com/api/venues");
+      const response = await fetch("https://seatflow-ytk1.onrender.com/api/venues");
       const data = await response.json();
 
       if (!response.ok || !data.success) {
@@ -160,7 +160,7 @@ function OrganiserDashboard() {
       // The backend organiser route expects venueId, date and pricing.
       // It automatically takes the seat capacity from the selected venue.
       const response = await fetch(
-        "http://https://seatflow-ytk1.onrender.com/api/organiser/events",
+        "https://seatflow-ytk1.onrender.com/api/organiser/events",
         {
           method: "POST",
           headers: {
@@ -222,7 +222,7 @@ function OrganiserDashboard() {
 
       // The organiser API is the correct protected route from the project.
       let response = await fetch(
-        `http://https://seatflow-ytk1.onrender.com/api/organiser/events/${eventId}/summary`,
+        `https://seatflow-ytk1.onrender.com/api/organiser/events/${eventId}/summary`,
         {
           method: "GET",
           headers: {
@@ -235,7 +235,7 @@ function OrganiserDashboard() {
       // Keep compatibility with an older backend route if it exists.
       if (!response.ok) {
         response = await fetch(
-          `http://https://seatflow-ytk1.onrender.com/api/events/${eventId}/summary`,
+          `https://seatflow-ytk1.onrender.com/api/events/${eventId}/summary`,
           {
             method: "GET",
             headers: {
@@ -286,7 +286,7 @@ function OrganiserDashboard() {
       setLoadingRevenue(true);
 
       let response = await fetch(
-        `http://https://seatflow-ytk1.onrender.com/api/events/${eventId}/revenue`,
+        `https://seatflow-ytk1.onrender.com/api/events/${eventId}/revenue`,
         {
           method: "GET",
           headers: {
@@ -299,7 +299,7 @@ function OrganiserDashboard() {
       // Fallback to the project organiser revenue endpoint.
       if (!response.ok) {
         response = await fetch(
-          "http://https://seatflow-ytk1.onrender.com/api/organiser/revenue",
+          "https://seatflow-ytk1.onrender.com/api/organiser/revenue",
           {
             method: "GET",
             headers: {
@@ -362,7 +362,7 @@ function OrganiserDashboard() {
       setGeneratingSeats(eventId);
 
       const response = await fetch(
-        `http://https://seatflow-ytk1.onrender.com/api/seats/generate/${eventId}`,
+        `https://seatflow-ytk1.onrender.com/api/seats/generate/${eventId}`,
         {
           method: "POST",
           headers: {

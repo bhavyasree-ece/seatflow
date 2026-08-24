@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const API_URL = "http://https://seatflow-ytk1.onrender.com";
+const API_URL = "https://seatflow-ytk1.onrender.com";
 
 const Payment = () => {
   const location = useLocation();
