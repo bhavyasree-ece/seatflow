@@ -1,0 +1,854 @@
+/* =====================================
+   MAIN PAGE
+===================================== */
+
+.seat-page {
+  min-height: 100vh;
+  padding: 40px 6%;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(124, 58, 237, 0.15),
+      transparent 35%
+    ),
+    #090a10;
+  color: #f5f5f7;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.seat-header {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.seat-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border: 1px solid #303241;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #ffffff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.seat-back-btn:hover {
+  background: #171923;
+  border-color: #8b5cf6;
+}
+
+
+.seat-title h1 {
+  margin: 0;
+
+  font-size: 34px;
+}
+
+
+.seat-title p {
+  margin: 6px 0 0;
+
+  color: #9da3b8;
+}
+
+
+/* =====================================
+   EVENT INFORMATION
+===================================== */
+
+.seat-event-info {
+  max-width: 1100px;
+  margin: 0 auto 25px;
+
+  padding: 22px 26px;
+
+  border: 1px solid #292c3a;
+  border-radius: 16px;
+
+  background: #11131b;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.seat-event-info h2 {
+  margin: 0 0 12px;
+
+  font-size: 24px;
+}
+
+
+.seat-event-info p {
+  margin: 7px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #a8aec2;
+}
+
+
+.seat-price {
+  text-align: right;
+}
+
+
+.seat-price span {
+  display: block;
+
+  color: #9298ad;
+
+  font-size: 13px;
+
+  margin-bottom: 5px;
+}
+
+
+.seat-price strong {
+  font-size: 26px;
+}
+
+
+/* =====================================
+   LEGEND
+===================================== */
+
+.seat-legend {
+  max-width: 700px;
+  margin: 0 auto 25px;
+
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+
+  color: #a8aec2;
+  font-size: 14px;
+}
+
+
+.seat-legend div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.legend-box {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 4px;
+
+  display: inline-block;
+}
+
+
+.legend-box.available {
+  background: #252938;
+  border: 1px solid #555b70;
+}
+
+
+.legend-box.selected {
+  background: #8b5cf6;
+}
+
+
+.legend-box.booked {
+  background: #3c3f49;
+  opacity: 0.5;
+}
+
+
+/* =====================================
+   SCREEN
+===================================== */
+
+.screen {
+  max-width: 720px;
+  height: 45px;
+
+  margin: 0 auto 45px;
+
+  border-radius: 50% 50% 10px 10px;
+
+  background: linear-gradient(
+    180deg,
+    #8b5cf6,
+    #4c1d95
+  );
+
+  box-shadow:
+    0 10px 35px rgba(139, 92, 246, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.screen span {
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+/* =====================================
+   SEAT LAYOUT
+===================================== */
+
+.seat-layout {
+  max-width: 850px;
+
+  margin: 0 auto 40px;
+
+  padding: 35px 20px;
+
+  border: 1px solid #292c3a;
+
+  border-radius: 18px;
+
+  background: #10121a;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+.seat-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 16px;
+}
+
+
+.row-label {
+  width: 25px;
+
+  color: #858ba0;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+/* =====================================
+   INDIVIDUAL SEAT
+===================================== */
+
+.seat {
+  width: 42px;
+  height: 38px;
+
+  border-radius: 8px;
+
+  border: 1px solid #4a4f63;
+
+  background: #252938;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s,
+    background 0.15s,
+    border-color 0.15s;
+}
+
+
+.seat:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  border-color: #a78bfa;
+
+  background: #363a4d;
+}
+
+
+/* Available */
+
+.seat.available {
+  background: #252938;
+}
+
+
+/* Selected */
+
+.seat.selected {
+  background: #8b5cf6;
+
+  border-color: #a78bfa;
+
+  box-shadow:
+    0 5px 18px rgba(139, 92, 246, 0.35);
+}
+
+
+/* Booked */
+
+.seat.booked {
+  background: #343741;
+
+  border-color: #343741;
+
+  color: #666b7a;
+
+  cursor: not-allowed;
+
+  opacity: 0.6;
+}
+
+
+/* =====================================
+   SUMMARY
+===================================== */
+
+.selection-summary {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 20px 24px;
+
+  border: 1px solid #303342;
+
+  border-radius: 16px;
+
+  background: #141620;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+.selected-info {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.summary-icon {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 10px;
+
+  background: rgba(139, 92, 246, 0.15);
+
+  color: #a78bfa;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.selected-info span,
+.summary-price span {
+  display: block;
+
+  color: #858ba0;
+
+  font-size: 13px;
+
+  margin-bottom: 4px;
+}
+
+
+.selected-info strong {
+  display: block;
+
+  color: #ffffff;
+}
+
+
+.summary-price {
+  min-width: 100px;
+
+  text-align: right;
+}
+
+
+.summary-price strong {
+  font-size: 22px;
+}
+
+
+/* =====================================
+   CONTINUE BUTTON
+===================================== */
+
+.continue-btn {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 13px 22px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #8b5cf6;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.continue-btn:hover:not(:disabled) {
+  background: #7c3aed;
+
+  transform: translateY(-1px);
+}
+
+
+.continue-btn:disabled {
+  background: #343642;
+
+  color: #73788a;
+
+  cursor: not-allowed;
+}
+
+
+.continue-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* =====================================
+   NOT FOUND
+===================================== */
+
+.seat-not-found {
+  min-height: 80vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+
+.seat-not-found button {
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #8b5cf6;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 800px) {
+
+  .seat-page {
+    padding: 25px 15px;
+  }
+
+
+  .seat-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+
+  .seat-event-info {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+
+  .seat-price {
+    text-align: left;
+  }
+
+
+  .seat-legend {
+    gap: 12px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .seat-layout {
+    overflow-x: auto;
+  }
+
+
+  .seat-row {
+    justify-content: flex-start;
+
+    min-width: 620px;
+  }
+
+
+  .selection-summary {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .summary-price {
+    text-align: left;
+  }
+
+
+  .continue-btn {
+    width: 100%;
+  }
+
+}
+/* ==========================================
+   SEAT CATEGORY SECTIONS
+========================================== */
+
+.seat-category-section {
+  margin: 30px 0;
+  padding: 28px;
+  border: 1px solid #292d3a;
+  border-radius: 24px;
+  background: #11131b;
+}
+
+.seat-category-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #292d3a;
+}
+
+.category-heading-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(139, 92, 246, 0.15);
+  color: #a875ff;
+}
+
+.seat-category-heading h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.seat-category-heading p {
+  margin: 5px 0 0;
+  color: #8f98b0;
+  font-size: 14px;
+}
+
+.premium-heading {
+  border-color: rgba(168, 117, 255, 0.25);
+}
+
+.standard-heading {
+  border-color: rgba(100, 116, 139, 0.25);
+}
+
+/* ==========================================
+   CATEGORY AVAILABILITY
+========================================== */
+
+.category-availability {
+  margin: 25px 0;
+  padding: 28px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 22px;
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.availability-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+  color: #a875ff;
+}
+
+.availability-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.availability-heading p {
+  margin: 5px 0 0;
+  color: #9ba4bd;
+}
+
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  );
+  gap: 18px;
+}
+
+.category-card {
+  padding: 20px;
+  border: 1px solid #303442;
+  border-radius: 16px;
+  background: #11131b;
+}
+
+.premium-card {
+  border-color: rgba(168, 117, 255, 0.35);
+}
+
+.standard-card {
+  border-color: rgba(100, 116, 139, 0.3);
+}
+
+.category-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.category-title svg {
+  color: #a875ff;
+}
+
+.category-available {
+  color: #5ee6a8;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.category-full {
+  color: #ff7373;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.waitlist-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #7c3aed
+  );
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.waitlist-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.25);
+}
+
+.waitlist-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   WAITLIST RESULT
+========================================== */
+
+.waitlist-result {
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid rgba(94, 230, 168, 0.35);
+  border-radius: 14px;
+  background: rgba(94, 230, 168, 0.07);
+}
+
+.waitlist-result-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.waitlist-result-main svg {
+  color: #5ee6a8;
+}
+
+.waitlist-result p {
+  margin: 10px 0 0 31px;
+  color: #b184ff;
+  font-weight: 600;
+}
+
+/* ==========================================
+   HELD SEAT LEGEND
+========================================== */
+
+.legend-box.locked {
+  background: #454957;
+  border-color: #666b7a;
+}
+
+/* ==========================================
+   PREMIUM / STANDARD SEATS
+========================================== */
+
+.premium-seat {
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.standard-seat {
+  border-color: #4a5062;
+}
+
+.premium-seat:hover:not(:disabled) {
+  border-color: #a875ff;
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.25);
+}
+
+.standard-seat:hover:not(:disabled) {
+  border-color: #7d8599;
+}
+
+/* Keep selected state stronger than category */
+.seat.selected {
+  border-color: #a875ff;
+  background: linear-gradient(
+    135deg,
+    #9b5cff,
+    #7139d8
+  );
+  color: #ffffff;
+  box-shadow:
+    0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.seat-error-message {
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border: 1px solid #ef4444;
+  border-radius: 10px;
+  background: #3b1018;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .seat-category-section {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .category-availability {
+    padding: 20px;
+  }
+
+  .category-card-top {
+    align-items: flex-start;
+  }
+
+  .seat-category-heading h2 {
+    font-size: 20px;
+  }
+
+}

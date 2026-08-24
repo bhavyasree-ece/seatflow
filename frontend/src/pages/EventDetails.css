@@ -1,0 +1,106 @@
+.details-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #0b0b12;
+  color: white;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid #333342;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.details-card {
+  max-width: 1000px;
+  margin: auto;
+  background: #11111a;
+  border: 1px solid #29293a;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.details-banner {
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+  padding: 25px;
+}
+
+.details-banner span {
+  background: #1c1228;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.details-content {
+  padding: 35px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.details-header h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.details-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a9a9bd;
+  margin: 14px 0;
+}
+
+.price-box {
+  text-align: right;
+}
+
+.price-box small {
+  display: block;
+  color: #9999aa;
+}
+
+.price-box strong {
+  font-size: 30px;
+}
+
+.booking-section {
+  margin-top: 40px;
+  padding: 25px;
+  border: 1px solid #29293a;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-section h2 {
+  margin: 8px 0;
+}
+
+.booking-section p {
+  color: #9999aa;
+}
+
+.primary-btn {
+  background: #7c3aed;
+  color: white;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
