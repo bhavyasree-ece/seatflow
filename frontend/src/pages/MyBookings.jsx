@@ -24,7 +24,7 @@ function MyBookings() {
       return;
     }
 
-    fetch("http://localhost:5000/api/bookings/my", {
+    fetch("http://https://seatflow-ytk1.onrender.com/api/bookings/my", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ function MyBookings() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/bookings/${bookingId}/cancel`,
+        `http://https://seatflow-ytk1.onrender.com/api/bookings/${bookingId}/cancel`,
         {
           method: "PUT",
           headers: {

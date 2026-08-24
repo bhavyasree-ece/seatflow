@@ -44,7 +44,7 @@ function AdminDashboard() {
 
       const eventResponse =
         await fetch(
-          "http://localhost:5000/api/events"
+          "http://https://seatflow-ytk1.onrender.com/api/events"
         );
 
       const eventData =
@@ -58,7 +58,7 @@ function AdminDashboard() {
 
       const venueResponse =
         await fetch(
-          "http://localhost:5000/api/venues"
+          "http://https://seatflow-ytk1.onrender.com/api/venues"
         );
 
       const venueData =
@@ -108,7 +108,7 @@ function AdminDashboard() {
     try {
       const response =
         await fetch(
-          "http://localhost:5000/api/venues",
+          "http://https://seatflow-ytk1.onrender.com/api/venues",
           {
             method: "POST",
 
@@ -177,7 +177,7 @@ function AdminDashboard() {
     try {
       const response =
         await fetch(
-          `http://localhost:5000/api/venues/${venueId}`,
+          `http://https://seatflow-ytk1.onrender.com/api/venues/${venueId}`,
           {
             method: "DELETE",
 
@@ -230,7 +230,7 @@ function AdminDashboard() {
     try {
       const response =
         await fetch(
-          `http://localhost:5000/api/events/${eventId}`,
+          `http://https://seatflow-ytk1.onrender.com/api/events/${eventId}`,
           {
             method: "DELETE",
 
@@ -283,7 +283,7 @@ function AdminDashboard() {
     try {
       const response =
         await fetch(
-          `http://localhost:5000/api/seats/generate/${eventId}`,
+          `http://https://seatflow-ytk1.onrender.com/api/seats/generate/${eventId}`,
           {
             method: "POST",
 

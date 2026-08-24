@@ -12,7 +12,7 @@ import {
 
 import "./EventDetails.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "http://https://seatflow-ytk1.onrender.com";
 
 function EventDetails() {
   const { id } = useParams();

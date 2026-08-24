@@ -14,7 +14,7 @@ import {
 
 import "./Booking.css";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "http://https://seatflow-ytk1.onrender.com/api";
 
 function Booking() {
   const navigate = useNavigate();
@@ -668,7 +668,7 @@ function Booking() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/bookings/${bookingId}/cancel`,
+        `http://https://seatflow-ytk1.onrender.com/api/bookings/${bookingId}/cancel`,
         {
           method: "PUT",
           headers: {
